@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 ## cf from http://programster.blogspot.com/2014/05/ubuntu-14-desktop-install-fira-sans-and.html
 
 # Find out if we're on cygwin, in case some programs need to know during installation.
