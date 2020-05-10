@@ -14,15 +14,15 @@ fi
 cd /tmp
 
 # install unzip just in case the user doesn't already have it.
-if [ $CYGWIN_FLAG = "1" ]; then
+if [ $CYGWIN_FLAG = "0" ]; then
     sudo apt-get install unzip -y
 fi
 
 # Fonts also available at: https://github.com/bBoxType/FiraSans
 wget "https://bboxtype.com/downloads/Fira/Download_Folder_FiraSans_4301.zip"
 wget "https://bboxtype.com/downloads/Fira/Fira_Mono_3_2.zip"
-unzip Download_Folder_FiraSans_4301.zip
-unzip Fira_Mono_3_2.zip
+unzip -q Download_Folder_FiraSans_4301.zip
+unzip -q Fira_Mono_3_2.zip
 
 if [ $CYGWIN_FLAG = "1" ]; then
     mkdir -p /usr/share/fonts/truetype/FiraSans
